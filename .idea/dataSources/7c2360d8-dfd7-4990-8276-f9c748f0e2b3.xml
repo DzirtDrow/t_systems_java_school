@@ -936,305 +936,421 @@
     <table id="237" parent="4" name="goods">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="238" parent="4" name="order">
+    <table id="238" parent="4" name="goodsparameter">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="239" parent="4" name="role">
+    <table id="239" parent="4" name="order">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="240" parent="4" name="storage">
+    <table id="240" parent="4" name="parameter">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="241" parent="4" name="type">
+    <table id="241" parent="4" name="role">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="242" parent="4" name="user">
+    <table id="242" parent="4" name="storage">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="243" parent="4" name="useradress">
+    <table id="243" parent="4" name="type">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="244" parent="4" name="userrole">
+    <table id="244" parent="4" name="typeparameter">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="245" parent="235" name="idaddress">
+    <table id="245" parent="4" name="user">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="246" parent="4" name="useradress">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="247" parent="4" name="userrole">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="248" parent="235" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="235" name="country">
+    <column id="249" parent="235" name="country">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="235" name="city">
+    <column id="250" parent="235" name="city">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="235" name="street">
+    <column id="251" parent="235" name="street">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="235" name="building">
+    <column id="252" parent="235" name="building">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="235" name="apartment">
+    <column id="253" parent="235" name="apartment">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="235" name="index">
+    <column id="254" parent="235" name="index">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="252" parent="235" name="PRIMARY">
+    <key id="255" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>idaddress</ColNames>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="253" parent="236" name="idorder">
+    <column id="256" parent="236" name="idorder">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="236" name="idgoods">
+    <column id="257" parent="236" name="idgoods">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="236" name="count">
+    <column id="258" parent="236" name="count">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="256" parent="236" name="idorder">
+    <column id="259" parent="236" name="id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="260" parent="236" name="idorder">
       <ColNames>idorder</ColNames>
     </index>
-    <index id="257" parent="236" name="idgoods">
+    <index id="261" parent="236" name="idgoods">
       <ColNames>idgoods</ColNames>
     </index>
-    <foreign-key id="258" parent="236" name="cart_ibfk_2">
+    <key id="262" parent="236" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="263" parent="236" name="cart_ibfk_2">
       <ColNames>idorder</ColNames>
       <RefSchemaName>internet_shop_db</RefSchemaName>
       <RefTableName>order</RefTableName>
-      <RefColNames>idorder</RefColNames>
+      <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="259" parent="236" name="cart_ibfk_1">
+    <foreign-key id="264" parent="236" name="cart_ibfk_1">
       <ColNames>idgoods</ColNames>
       <RefSchemaName>internet_shop_db</RefSchemaName>
       <RefTableName>goods</RefTableName>
-      <RefColNames>idgoods</RefColNames>
+      <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="260" parent="237" name="idgoods">
+    <column id="265" parent="237" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="237" name="name">
+    <column id="266" parent="237" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="237" name="price">
+    <column id="267" parent="237" name="price">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="237" name="idtype">
+    <column id="268" parent="237" name="idtype">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="264" parent="237" name="PRIMARY">
+    <index id="269" parent="237" name="idtype">
+      <ColNames>idtype</ColNames>
+    </index>
+    <key id="270" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>idgoods</ColNames>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="265" parent="238" name="idorder">
+    <foreign-key id="271" parent="237" name="goods_ibfk_1">
+      <ColNames>idtype</ColNames>
+      <RefSchemaName>internet_shop_db</RefSchemaName>
+      <RefTableName>type</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="272" parent="238" name="idgoods">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="273" parent="238" name="idparameter">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="274" parent="238" name="parametervalue">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="275" parent="238" name="idgoods">
+      <ColNames>idgoods</ColNames>
+    </index>
+    <index id="276" parent="238" name="idparameter">
+      <ColNames>idparameter</ColNames>
+    </index>
+    <foreign-key id="277" parent="238" name="goodsparameter_ibfk_2">
+      <ColNames>idgoods</ColNames>
+      <RefSchemaName>internet_shop_db</RefSchemaName>
+      <RefTableName>goods</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="278" parent="238" name="goodsparameter_ibfk_1">
+      <ColNames>idparameter</ColNames>
+      <RefSchemaName>internet_shop_db</RefSchemaName>
+      <RefTableName>parameter</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="279" parent="239" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="238" name="date">
+    <column id="280" parent="239" name="date">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="238" name="iduser">
+    <column id="281" parent="239" name="iduser">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="238" name="idaddress">
+    <column id="282" parent="239" name="idaddress">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="269" parent="238" name="iduser">
+    <index id="283" parent="239" name="iduser">
       <ColNames>iduser</ColNames>
     </index>
-    <index id="270" parent="238" name="idaddress">
+    <index id="284" parent="239" name="idaddress">
       <ColNames>idaddress</ColNames>
     </index>
-    <key id="271" parent="238" name="PRIMARY">
+    <key id="285" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>idorder</ColNames>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="272" parent="238" name="order_ibfk_1">
+    <foreign-key id="286" parent="239" name="order_ibfk_1">
       <ColNames>iduser</ColNames>
       <RefSchemaName>internet_shop_db</RefSchemaName>
       <RefTableName>user</RefTableName>
-      <RefColNames>iduser</RefColNames>
+      <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="273" parent="238" name="order_ibfk_2">
+    <foreign-key id="287" parent="239" name="order_ibfk_2">
       <ColNames>idaddress</ColNames>
       <RefSchemaName>internet_shop_db</RefSchemaName>
       <RefTableName>address</RefTableName>
-      <RefColNames>idaddress</RefColNames>
+      <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="274" parent="239" name="idrole">
+    <column id="288" parent="240" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="239" name="role">
+    <column id="289" parent="240" name="parametername">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="276" parent="239" name="PRIMARY">
+    <key id="290" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>idrole</ColNames>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="277" parent="240" name="idgoods">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="278" parent="240" name="count">
-      <Position>2</Position>
-      <DataType>int(11)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="279" parent="241" name="idtype">
+    <column id="291" parent="241" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="241" name="typename">
+    <column id="292" parent="241" name="role">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="281" parent="241" name="PRIMARY">
+    <key id="293" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="294" parent="242" name="idgoods">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="295" parent="242" name="count">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="296" parent="242" name="idgoods">
+      <ColNames>idgoods</ColNames>
+    </index>
+    <foreign-key id="297" parent="242" name="storage_ibfk_1">
+      <ColNames>idgoods</ColNames>
+      <RefSchemaName>internet_shop_db</RefSchemaName>
+      <RefTableName>goods</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="298" parent="243" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="299" parent="243" name="typename">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="300" parent="243" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="301" parent="244" name="idparameter">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="302" parent="244" name="idtype">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="303" parent="244" name="idparameter">
+      <ColNames>idparameter</ColNames>
+    </index>
+    <index id="304" parent="244" name="idtype">
       <ColNames>idtype</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="282" parent="242" name="iduser">
+    </index>
+    <foreign-key id="305" parent="244" name="typeparameter_ibfk_2">
+      <ColNames>idparameter</ColNames>
+      <RefSchemaName>internet_shop_db</RefSchemaName>
+      <RefTableName>parameter</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="306" parent="244" name="typeparameter_ibfk_1">
+      <ColNames>idtype</ColNames>
+      <RefSchemaName>internet_shop_db</RefSchemaName>
+      <RefTableName>type</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="307" parent="245" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="242" name="name">
+    <column id="308" parent="245" name="username">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="242" name="lastname">
+    <column id="309" parent="245" name="lastname">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="242" name="password">
+    <column id="310" parent="245" name="password">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="242" name="birthdate">
+    <column id="311" parent="245" name="birthdate">
       <Position>5</Position>
       <DataType>date|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="242" name="email">
+    <column id="312" parent="245" name="email">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="288" parent="242" name="PRIMARY">
+    <key id="313" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>iduser</ColNames>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="289" parent="243" name="iduser">
+    <column id="314" parent="246" name="iduser">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="243" name="idadress">
+    <column id="315" parent="246" name="idadress">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="291" parent="243" name="iduser">
+    <index id="316" parent="246" name="iduser">
       <ColNames>iduser</ColNames>
     </index>
-    <index id="292" parent="243" name="idadress">
+    <index id="317" parent="246" name="idadress">
       <ColNames>idadress</ColNames>
     </index>
-    <foreign-key id="293" parent="243" name="useradress_ibfk_1">
+    <foreign-key id="318" parent="246" name="useradress_ibfk_1">
       <ColNames>iduser</ColNames>
       <RefSchemaName>internet_shop_db</RefSchemaName>
       <RefTableName>user</RefTableName>
-      <RefColNames>iduser</RefColNames>
+      <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="294" parent="243" name="useradress_ibfk_2">
+    <foreign-key id="319" parent="246" name="useradress_ibfk_2">
       <ColNames>idadress</ColNames>
       <RefSchemaName>internet_shop_db</RefSchemaName>
       <RefTableName>address</RefTableName>
-      <RefColNames>idaddress</RefColNames>
+      <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="295" parent="244" name="iduser">
+    <column id="320" parent="247" name="iduser">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="244" name="idrole">
+    <column id="321" parent="247" name="idrole">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="297" parent="244" name="iduser">
+    <index id="322" parent="247" name="iduser">
       <ColNames>iduser</ColNames>
     </index>
-    <index id="298" parent="244" name="idrole">
+    <index id="323" parent="247" name="idrole">
       <ColNames>idrole</ColNames>
     </index>
-    <foreign-key id="299" parent="244" name="userrole_ibfk_1">
+    <foreign-key id="324" parent="247" name="userrole_ibfk_1">
       <ColNames>iduser</ColNames>
       <RefSchemaName>internet_shop_db</RefSchemaName>
       <RefTableName>user</RefTableName>
-      <RefColNames>iduser</RefColNames>
+      <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="300" parent="244" name="userrole_ibfk_2">
+    <foreign-key id="325" parent="247" name="userrole_ibfk_2">
       <ColNames>idrole</ColNames>
       <RefSchemaName>internet_shop_db</RefSchemaName>
       <RefTableName>role</RefTableName>
-      <RefColNames>idrole</RefColNames>
+      <RefColNames>id</RefColNames>
     </foreign-key>
   </database-model>
 </dataSource>
